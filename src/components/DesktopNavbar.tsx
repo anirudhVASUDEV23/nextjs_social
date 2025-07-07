@@ -7,7 +7,7 @@ import { currentUser } from "@clerk/nextjs/server";
 
 async function DesktopNavbar() {
   const user = await currentUser();
-//   console.log("This is a server component:User is", user);
+  //   console.log("This is a server component:User is", user);
   return (
     <div className="hidden md:flex items-center space-x-4">
       <ModeToggle />
@@ -31,7 +31,7 @@ async function DesktopNavbar() {
             <Link
               href={`/profile/${
                 user.username ??
-                user.emailAddresses[0].emailAddress.split("@")[0]
+                user.emailAddresses[0].emailAddress.split("@")[0].split(".")[0]
               }`}
             >
               <UserIcon className="w-4 h-4" />
