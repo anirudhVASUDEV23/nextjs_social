@@ -8,7 +8,7 @@ import { notFound } from "next/navigation";
 import React from "react";
 import ProfilePageClient from "./ProfilePageClient";
 
-export async function generateMetaData({
+export async function generateMetadata({
   params,
 }: {
   params: { username: string };
